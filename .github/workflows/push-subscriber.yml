@@ -3,7 +3,7 @@ name: Push Subscriber
 on:
   push:
     tags:
-      - **
+      - '**'
 
 jobs:
   display-tag:
