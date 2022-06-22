@@ -11,8 +11,6 @@ jobs:
     permissions:
       contents: write
 
-    env:
-      GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
 
     steps:
       - name: Checkout
