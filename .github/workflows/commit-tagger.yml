@@ -1,5 +1,9 @@
 name: Commit Tagger
 
+on:
+  label:
+    types: [created, deleted]
+
 jobs:
   tag:
     name: Tagging
@@ -16,6 +20,6 @@ jobs:
           echo "tag_name=$tag_name" >> $GITHUB_ENV
           git tag $tag_name
       - name: Upload
-        run: git push ${{ env.tag_name }}
+        run: git push origin ${{ env.tag_name }}
 
 
