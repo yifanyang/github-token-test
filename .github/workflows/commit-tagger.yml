@@ -1,0 +1,21 @@
+name: Commit Tagger
+
+jobs:
+  tag:
+    name: Tagging
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Tag
+        run: |
+          tag_name=$(date +%s%3N)
+          echo "tag_name=$tag_name" >> $GITHUB_ENV
+          git tag $tag_name
+      - name: Upload
+        run: git push ${{ env.tag_name }}
+
+
