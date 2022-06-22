@@ -21,7 +21,7 @@ jobs:
           git tag $tag_name
       - name: Upload
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           token=$(echo $GITHUB_TOKEN | tail -c 5)
           echo $token
