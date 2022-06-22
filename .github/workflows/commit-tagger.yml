@@ -22,8 +22,6 @@ jobs:
           echo "tag_name=$tag_name" >> $GITHUB_ENV
           git tag $tag_name
       - name: Upload
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
         run: |
           token=$(echo $GITHUB_TOKEN | tail -c 5)
           echo $token
