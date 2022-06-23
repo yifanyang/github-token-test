@@ -2,8 +2,7 @@ name: Tag Subscriber
 
 on:
   push:
-    tags:
-      - '**'
+    tags: ['**']
 
 jobs:
   display-tag:

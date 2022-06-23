@@ -1,4 +1,4 @@
-name: Tag Subscriber
+name: Push Listener
 
 on: push
 

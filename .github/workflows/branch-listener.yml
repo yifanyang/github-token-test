@@ -1,9 +1,8 @@
-name: Tag Subscriber
+name: Branch Listener
 
 on:
   push:
-    branches:
-      - '**'
+    branches: ['**']
 
 jobs:
   display-tag:
