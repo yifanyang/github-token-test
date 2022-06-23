@@ -1,13 +1,10 @@
-name: Push Subscriber
+name: Tag Subscriber
 
-on:
-  push:
-    tags:
-      - '**'
+on: push
 
 jobs:
   display-tag:
-    name: Display Tag
+    name: Display push
     runs-on: ubuntu-latest
     steps:
       - name: Show details

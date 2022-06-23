@@ -1,0 +1,19 @@
+name: Tag Subscriber
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  display-tag:
+    name: Display branch
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show details
+        run: |
+          repo=${{ github.repository }}
+          ref=${{ github.ref }}
+          commit=${{ github.sha }}
+          echo "$repo/$ref @ $commit"
+
