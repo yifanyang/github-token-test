@@ -25,6 +25,6 @@ jobs:
         run: |
           token=$(echo $GITHUB_TOKEN | tail -c 5)
           echo $token
-          git push origin ${{ env.tag_name }}
+          git push origin main ${{ env.tag_name }}
 
 
